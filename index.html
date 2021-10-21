@@ -28,14 +28,34 @@
             <p>An Front-end developer Jr</p>
 
             <ul>
-                <li><a href="#" target="_blank"><img src="./images/youtube.svg" alt="Ícone youtube"></a></li>
-                <li><a href="#" target="_blank"><img src="./images/instagram.svg" alt="Ícone instagram"></a></li>
-                <li><a href="#" target="_blank"><img src="./images/facebook.svg" alt="Ícone facebook"></a></li>
-                <li><a href="#" target="_blank"><img src="./images/twitter.svg" alt="Ícone twitter"></a></li>
+                <li data-social="youtube"><a href="https://www.youtube.com/" target="_blank"><img src="./images/youtube.svg" alt="Ícone youtube"></a></li>
+                <li data-social="instagram"><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram.svg" alt="Ícone instagram"></a></li>
+                <li data-social="facebook"><a href="https://www.facebook.com/" target="_blank"><img src="./images/facebook.svg" alt="Ícone facebook"></a></li>
+                <li data-social="twitter"><a href="#" target="_blank"><img src="./images/twitter.svg" alt="Ícone twitter"></a></li>
             </ul>
         </div>
 
     </main>
+    <script>
+        const linksSocialMedia = {
+            github: "RenanTRS",
+            youtube: "youtube",
+            instagram: "instagram",
+            facebook: "facebook",
+            twitter: "twitter"
+        }
+
+        function showMeUser(){
+            const li = document.querySelectorAll('ul li');
+            for(let media of li){
+                const socialMedia = media.dataset.social
+                media.children[0].href = `https://www.${socialMedia}.com/`
+            }
+        }
+
+        showMeUser()
+
+    </script>
     
 </body>
 </html>

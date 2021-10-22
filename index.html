@@ -20,12 +20,12 @@
                 <span>
                     <img src="./images/build.svg" alt="Selo Roketseat">
                 </span>
-                <img src="http://lorempixel.com/185/185/people/" alt="Foto pessoal">
+                <img id="imagem" src="http://lorempixel.com/185/185/people/" alt="Foto pessoal">
             </div>
-            <h1>Renan Souza</h1>
-            <a href="https://github.com/RenanTRS"><img src="./images/github.svg" alt="Ícone svg">RenanTRS</a>
+            <h1 id="nameUser">Renan</h1>
+            <a href="https://github.com/RenanS" target="_blank" id="aLink"><img src="./images/github.svg" alt="Ícone svg"><span id="userLogin">Renan</span></a>
 
-            <p>An Front-end developer Jr</p>
+            <p id="bio">An Front-end developer Jr</p>
 
             <ul>
                 <li data-social="youtube"><a href="https://www.youtube.com/" target="_blank"><img src="./images/youtube.svg" alt="Ícone youtube"></a></li>
@@ -36,26 +36,6 @@
         </div>
 
     </main>
-    <script>
-        const linksSocialMedia = {
-            github: "RenanTRS",
-            youtube: "youtube",
-            instagram: "instagram",
-            facebook: "facebook",
-            twitter: "twitter"
-        }
-
-        function showMeUser(){
-            const li = document.querySelectorAll('ul li');
-            for(let media of li){
-                const socialMedia = media.dataset.social
-                media.children[0].href = `https://www.${socialMedia}.com/`
-            }
-        }
-
-        showMeUser()
-
-    </script>
-    
+    <script src="./main.js"></script>
 </body>
 </html>
